@@ -14,23 +14,56 @@
     <title>Important Date Tracker </title>
     
 </head>
-<body>
-    <h1>Add A Date </h1>
-    <form action="#" method="post">
+	<body>
+    	<h1>Add An Event </h1>
+    	<form action="#" method="post">
     	<fieldset>
     		<legend>Event</legend>
     		<ul>
     			<li>Date :<input type="date" id="date">
-    			
+    	</fieldset>
+    	<br>
+    	<fieldset>
+    			<li><label for="importance">On a scale of 1 to 10, the importance of this date is:</label>
+    				<input type="range" min="1" max = "10" name="importance" type=range>
+    	</fieldset>
+    		<br>
+    	<fieldset>
+    			<li>Is the event for:
+    				<ul>
+    					<li><input type="radio" checked value="Family" id="family" name="relation"/> 
+    						<label for"family">Family</label></li>
+    					<li><input type="radio" checked value="Friend" id="friend" name="relation"/> 
+    						<label for"friend">Friend</label></li>
+    					<li><input type="radio" checked value="coworker" id="coworker" name="relation"/> 
+    						<label for"coworker">Co-Worker</label></li>
+    					<li><input type="radio" checked value="Other" id="Other" name="relation"/> 
+    						<label for"Other">Other</label></li>
+    				</ul>
+    	</fieldset>
+    		<br>
+    	<fieldset>
     			<li><label for="eventtype">Event Type</label>
     				<select id="eventtype">
-    					<option value="birthday">Birthday</option>
-    					<option value="anniversary">Anniversary</option>
-    					<option value="holiday">Holiday</option>
+    					<optgroup label="Recurring Events">
+    						<option value="birthday">Birthday</option>
+    						<option value="anniversary">Anniversary</option>
+    						<option value="holiday">Holiday</option>
+    						<option value="recurringother">Recurring Other</option>
+    					</optgroup>
+    					</optgroup label="Non-Recurring Events">
     					<option value="other">Other</option>
-    					
-    			<li><label for="note">Note : </label><input type ="text" id="note"/>
-    			
+    					</optgroup>
+    				</select>
+    			</li>
+    			<br>
+    	</fieldset>
+    		<br>
+    	<fieldset>
+    			<li><label for"comments">Notes about event:</label><textarea id="comments"></textarea></li>
+    	</fieldset>
+    		<input type="submit" value="Submit" />
+    	</form>		
     
-</body>
+	</body>
 </html>
