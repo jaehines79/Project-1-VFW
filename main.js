@@ -5,7 +5,7 @@
 
 
 window.addEventListener("DOMContentLoaded", function(){
-	alert(localstorage.value(0));
+	//alert(localstorage.value(0));
 	
 	//getElementbyId Function
 	function $(x){
@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		for(var i=0, j=eventGroups.length; i<j; i++){
 			var makeOption = document.creatElement("option");
 			var optText = eventGroups[i];
-			makeOption.setAttribute)"value", optText);
+			makeOption.setAttribute("value", optText);
 			makeOption.innerHTML = optText;
 			makeSelect.appendChild(makeOption);
 		}
@@ -44,12 +44,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		//gather form field values in an object
 		//object properties contain array with form label and input values
 		getSelectedRadio();
-		var item      	    = (),
-			item.ename 		= ["Name: ", $("name"), value]
+		var item      	    = {};
+			item.group		= ["Group: ", $("groups"), value];
+			item.ename 		= ["Name: ", $("name"), value];
 			item.edate		= ["Date: ", $("date"), value];
-			item.radio		= ["Choice: ", radiovalue];
-			item.checkbox	= ["Check: ", checkboxvalue];
+			item.relation	= ["Choice: ", relationvalue];
 			item.notes		= ["Notes: ", $("comments"), value];
+			item.importance = ["Importance: ", $("importance"), value];
 			
 			
 		//Save data into local storage: Use Stringify to convert object to a string
@@ -73,6 +74,5 @@ window.addEventListener("DOMContentLoaded", function(){
 	clearlink.addEventListener("click", clearLocal);
 	var save = $("submit");
 	save.addEventListener("click", storeData);
-
-
-});
+}
+})

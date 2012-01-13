@@ -1,0 +1,25 @@
+/* Activity 2 */
+/* Visual Frameworks 1201 */
+/* Janis Hines */
+/* January 12, 2012 */
+
+
+html {
+    background-color: #A3A3C2;
+    color: #FBFBFB;
+	font-family: Georgia, serif;
+	margin: 20px;
+	border: 2px #FFFFFF;
+	padding: 20px;
+	outline: 1px dotted #FFFFFF;
+}
+h1{
+	color: #FFFFFF;
+	font-family: Georgia, serif;
+	margin: 20px;
+	border: 2px #FFFFFF;
+	padding: 20px;
+	outline: 1px dotted #FFFFFF;
+	background: #5E5E82;
+	text-align: center;
+}
