@@ -8,18 +8,30 @@ html {
     background-color: #A3A3C2;
     color: #FBFBFB;
 	font-family: Georgia, serif;
-	margin: 20px;
 	border: 2px #FFFFFF;
-	padding: 20px;
 	outline: 1px dotted #FFFFFF;
 }
+a{ outline: 1px dotted line;}
+a:hover{color:black; outline:none;}
+
 h1{
 	color: #FFFFFF;
 	font-family: Georgia, serif;
-	margin: 20px;
-	border: 2px #FFFFFF;
-	padding: 20px;
-	outline: 1px dotted #FFFFFF;
+	margin: 10px 20px;
+	border: 2px solid #FFFFFF;
+	padding: 10px;
 	background: #5E5E82;
 	text-align: center;
 }
+fieldset{
+	margin: 10px;
+	text-align: left;
+}
+
+ul{
+	margin:15px;
+}
+li{
+	margin:15px;
+}
+
