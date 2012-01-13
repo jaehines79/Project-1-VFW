@@ -6,64 +6,80 @@
 	<meta name="description" content="Important Date Tracker" />
 	<meta name="keywords" content="birthdays, holidays, dates" />
 	<meta name="robots" content="index, follow" />
-	<meta name="viewport" content="user-scalable=no, with=device-width" />
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
 	<meta name="viewport" content="target-densitydpi=device-dpi" />
 	<meta name="HandHeldFriendly" content="True" />
 	<meta name="MobileOptimized" content="320" />
 	
     <title>Important Date Tracker </title>
-    
 </head>
 	<body>
-    	<h1>Add An Event </h1>
-    	<form action="#" method="post">
+    	<header><h1>Event Tracker</h1></header>
+    	<nav>
+    		<a href="#" id="Display">Display</a> 
+    		<a href="#" id="Clear">Clear</a> 
+    	</nav>
+    	<form action="#" method="post" id="eventform"/>
+    	<fieldset id="eventFieldset">
+    		<legend>Add an Event</legend>
+    		<span>* all fields are required</span>
+    		<ul id="errors"></ul>
+    		<ul id="questions">
     	<fieldset>
-    		<legend>Event</legend>
     		<ul>
+    			<li>Name of Event :<input type="text" id="name">
     			<li>Date :<input type="date" id="date">
+    		</ul>
     	</fieldset>
     	<br>
+    	<legend>Importance<legend>
     	<fieldset>
+    		<br>
     			<li><label for="importance">On a scale of 1 to 10, the importance of this date is:</label>
-    				<input type="range" min="1" max = "10" name="importance" type=range>
+    				<input type="range" min="1" max = "10" name="importance" type=range>    				
     	</fieldset>
     		<br>
+    		<legend>Event Details<legend>
     	<fieldset>
-    			<li>Is the event for:
-    				<ul>
+    			<li>Is the event for:</li>
+    				<ul class="checkbox">
     					<li><input type="radio" checked value="Family" id="family" name="relation"/> 
-    						<label for"family">Family</label></li>
+    						<label for="family">Family</label></li>
     					<li><input type="radio" checked value="Friend" id="friend" name="relation"/> 
-    						<label for"friend">Friend</label></li>
+    						<label for="friend">Friend</label></li>
     					<li><input type="radio" checked value="coworker" id="coworker" name="relation"/> 
-    						<label for"coworker">Co-Worker</label></li>
+    						<label for="coworker">Co-Worker</label></li>
     					<li><input type="radio" checked value="Other" id="Other" name="relation"/> 
-    						<label for"Other">Other</label></li>
+    						<label for="Other">Other</label></li>
     				</ul>
     	</fieldset>
     		<br>
+    		<legend>More Event Details<legend>
     	<fieldset>
-    			<li><label for="eventtype">Event Type</label>
-    				<select id="eventtype">
-    					<optgroup label="Recurring Events">
+    			<li><id="select"><label for="group">Add Event type</label><br  />
+    				<ul>
+    					<select id="eventtype">
+    						<optgroup label="Recurring Events">
     						<option value="birthday">Birthday</option>
     						<option value="anniversary">Anniversary</option>
     						<option value="holiday">Holiday</option>
     						<option value="recurringother">Recurring Other</option>
-    					</optgroup>
-    					</optgroup label="Non-Recurring Events">
-    					<option value="other">Other</option>
-    					</optgroup>
-    				</select>
+    						</optgroup>
+    						</optgroup label="Non-Recurring Events">
+    						<option value="other">Other</option>
+    						</optgroup>
+    					</select>
+    				</ul>
     			</li>
     			<br>
     	</fieldset>
     		<br>
+    		<legend>Comments<legend>
     	<fieldset>
-    			<li><label for"comments">Notes about event:</label><textarea id="comments"></textarea></li>
+    			<li><label for="comments">Notes about event:</label><textarea id="comments"></textarea></li>
     	</fieldset>
-    		<input type="submit" value="Submit" />
-    	</form>		
-    
+    	<br>
+    		<input type="submit" id="save" value="Submit Event" /><br />
+    	</form>	
 	</body>
 </html>
