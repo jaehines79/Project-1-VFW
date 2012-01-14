@@ -17,21 +17,44 @@ a:hover{color:black; outline:none;}
 h1{
 	color: #FFFFFF;
 	font-family: Georgia, serif;
+	margin: 10px 5px;
+	border: 2px solid #FFFFFF;
+	padding: 5px;
+	background: #5E5E82;
+	text-align: center;
+}
+h2{
+	color: #FFFFFF;
+	font-family: Georgia, serif;
 	margin: 10px 20px;
 	border: 2px solid #FFFFFF;
 	padding: 10px;
 	background: #5E5E82;
 	text-align: center;
+}	
+legend{
+    color: #4B327D;
+    text-align: center;
 }
 fieldset{
+	border: 1px solid FFFFFF;
 	margin: 10px;
-	text-align: left;
+	text-align: center;
 }
-
 ul{
-	margin:15px;
+	color: #4B327D;
+	text-align: center;
 }
 li{
-	margin:15px;
+	color: #4B327D;
+	text-align: center;
 }
-
+nav{
+	color: #99CCFF
+	font-style: italic;
+	font-family: Georgia, serif;
+	font: 14px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+}
